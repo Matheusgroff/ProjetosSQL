@@ -1,0 +1,35 @@
+CREATE TABLE Clientes (
+  ID INT PRIMARY KEY,
+	NOME VARCHAR (50),
+	Cidade VARCHAR (50),
+     Idade INT
+	
+);
+
+INSERT INTO Clientes (ID, Nome, Cidade, Idade) VALUES
+(1, 'Ana', 'São Paulo', 28),
+(2, 'João', 'Rio de Janeiro', 35),
+(3, 'Maria', 'Belo Horizonte', 22),
+(4, 'Pedro', 'Curitiba', 45),
+(5, 'Carla', 'Recife', 30);
+
+SELECT * FROM Clientes; 
+INSERT INTO Clientes (ID, Nome, Cidade, Idade) VALUES
+(6, 'Carlos','Fortaleza',29 );
+
+DELETE FROM Clientes 
+Where Nome = 'Carlos';
+
+SELECT * FROM Clientes; 
+UPDATE Clientes
+SET Nome = 'Pedro Augusto'
+WHERE Nome = 'Pedro';
+
+SELECT Nome FROM Clientes;
+
+SELECT * FROM Clientes
+WHERE Idade > 40;
+
+SELECT * FROM Clientes
+ORDER BY Nome DESC;
+
