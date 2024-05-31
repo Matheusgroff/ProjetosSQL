@@ -1,0 +1,27 @@
+CREATE TABLE turma(
+ ID int primary key,
+	nome varchar (50),
+       media float
+);
+
+insert into turma (ID, nome, media) values
+(1, 'aluno1', 7.5),
+(2, 'aluno2', 8),
+(3, 'aluno3', 9 ),
+(4, 'aluno4', 7),
+(5, 'aluno5', 8),
+(6, 'aluno6', 8),
+(7, 'aluno7', 8.5);
+
+select * from turma; 
+
+ALTER TABLE turma RENAME COLUMN media TO n1;
+
+ALTER TABLE turma
+ADD COLUMN n2 float;
+
+ALTER TABLE turma ADD COLUMN media float;
+
+update turma
+set media = (n1 + n2)/2;
+
